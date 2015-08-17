@@ -31,48 +31,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DD4T.Bootstrap.Autofac, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\DD4T.NET.2.0.0-build20150805103759\lib\net45\DD4T.Bootstrap.Autofac.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DD4T.Bootstrap.Ninject, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\DD4T.NET.2.0.0-build20150805103759\lib\net45\DD4T.Bootstrap.Ninject.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DD4T.ContentModel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4450e3c7f68bf872, processorArchitecture=MSIL">
-      <HintPath>packages\DD4T.NET.2.0.0-build20150805103759\lib\net45\DD4T.ContentModel.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DD4T.ContentModel.Contracts, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4450e3c7f68bf872, processorArchitecture=MSIL">
-      <HintPath>packages\DD4T.NET.2.0.0-build20150805103759\lib\net45\DD4T.ContentModel.Contracts.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DD4T.ContentModel.XmlSerializers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4450e3c7f68bf872, processorArchitecture=MSIL">
-      <HintPath>packages\DD4T.NET.2.0.0-build20150805103759\lib\net45\DD4T.ContentModel.XmlSerializers.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="DD4T.Core.Contracts, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\DD4T.NET.2.0.0-build20150805103759\lib\net45\DD4T.Core.Contracts.dll</HintPath>
+      <HintPath>..\packages\DD4T.NET.2.0.0-alpha18\lib\net45\DD4T.Core.Contracts.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="DD4T.Factories, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\DD4T.NET.2.0.0-build20150805103759\lib\net45\DD4T.Factories.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DD4T.Mvc, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\DD4T.NET.2.0.0-build20150805103759\lib\net45\DD4T.Mvc.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DD4T.Providers.Test, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\DD4T.NET.2.0.0-build20150805103759\lib\net45\DD4T.Providers.Test.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DD4T.Serialization, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4450e3c7f68bf872, processorArchitecture=MSIL">
-      <HintPath>packages\DD4T.NET.2.0.0-build20150805103759\lib\net45\DD4T.Serialization.dll</HintPath>
+      <HintPath>..\packages\DD4T.NET.2.0.0-alpha18\lib\net45\DD4T.Factories.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="DD4T.Utils, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\DD4T.NET.2.0.0-build20150805103759\lib\net45\DD4T.Utils.dll</HintPath>
+      <HintPath>..\packages\DD4T.NET.2.0.0-alpha18\lib\net45\DD4T.Utils.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Practices.Unity, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -81,10 +49,6 @@
     </Reference>
     <Reference Include="Microsoft.Practices.Unity.Configuration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Unity.3.0.1304.0\lib\Net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>packages\DD4T.NET.2.0.0-build20150805103759\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
