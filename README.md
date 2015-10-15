@@ -15,7 +15,7 @@ Unity Dependency injection container
 2. Add `DD4T.DI.Unity` namespace to your usings;
 3. Call the `UseDD4T` method on your Unity `Microsoft.Practices.Unity.UnityContainer` interface.
 
->     UnityContainer container = new UnityContainer();
+>     IUnityContainer container = new UnityContainer();
 >     //set all your custom apllication binding here.
 >     
 >     container.UseDD4T();
@@ -26,7 +26,7 @@ UseDD4T will Register all default class provided by the DD4T framework.
 
 If you need to override the default classes: (i.e. the DefaultPublicationResovler) Register your class before the method call `UseDD4T`
 
->     UnityContainer container = new UnityContainer();
+>     IUnityContainer container = new UnityContainer();
 >     //set all your custom apllication binding here.
 >     container.RegisterType<IPublicationResolver, MyCustomPublicationResovler>(new ContainerControlledLifetimeManager());
 >     container.UseDD4T();
