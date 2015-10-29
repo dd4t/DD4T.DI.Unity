@@ -5,6 +5,7 @@ using DD4T.ContentModel.Contracts.Providers;
 using DD4T.ContentModel.Contracts.Resolvers;
 using DD4T.ContentModel.Factories;
 using DD4T.Core.Contracts.ViewModels;
+using DD4T.DI.Unity.Exceptions;
 using DD4T.Factories;
 using DD4T.Utils;
 using DD4T.Utils.Caching;
@@ -25,11 +26,18 @@ namespace DD4T.DI.Unity
 {
     public  static class Bootstrap
     {
-        public static void UserDD4T(this IUnityContainer container)
+        public static void UseDD4T(this IUnityContainer container)
         {
             //not all dll's are loaded in the app domain. we will load the assembly in the appdomain to be able map the mapping
-            var location = string.Format(@"{0}\bin\", AppDomain.CurrentDomain.BaseDirectory);
-            var file = Directory.GetFiles(location, "DD4T.Providers.*").FirstOrDefault();
+            var binDirectory = string.Format(@"{0}\bin\", AppDomain.CurrentDomain.BaseDirectory);
+            if (!Directory.Exists(binDirectory))
+                return;
+
+
+            var file = Directory.GetFiles(binDirectory, "DD4T.Providers.*").FirstOrDefault();
+            if (file == null)
+                throw new ProviderNotFoundException();
+
             var load = Assembly.LoadFile(file);
 
             var provider = AppDomain.CurrentDomain.GetAssemblies().Where(ass => ass.FullName.StartsWith("DD4T.Providers")).FirstOrDefault();
@@ -52,7 +60,8 @@ namespace DD4T.DI.Unity
             if(!container.IsRegistered<ICacheAgent>())
                 container.RegisterType<ICacheAgent, DefaultCacheAgent>();
 
-
+            container.RegisterMVCTypes();
+            container.RegisterRestProviderTypes();
             //providers
             if (binaryProvider != null && !container.IsRegistered<IBinaryProvider>())
                 container.RegisterType(typeof(IBinaryProvider), binaryProvider);

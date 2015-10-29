@@ -83,7 +83,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrap.cs" />
+    <Compile Include="Exceptions\ProviderNotFoundException.cs" />
+    <Compile Include="MVCTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestProviderTypes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
