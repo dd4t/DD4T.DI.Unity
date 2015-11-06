@@ -28,12 +28,21 @@ namespace DD4T.DI.Unity
             var iComponentPresentationRenderer = providerTypes.Where(a => a.FullName.Equals("DD4T.Mvc.Html.IComponentPresentationRenderer")).FirstOrDefault();
             var defaultComponentPresentationRenderer = providerTypes.Where(a => a.FullName.Equals("DD4T.Mvc.Html.DefaultComponentPresentationRenderer")).FirstOrDefault();
 
-            if (iComponentPresentationRenderer == null || defaultComponentPresentationRenderer == null)
-                return;
+            var iXpmMarkupService = providerTypes.Where(a => a.FullName.Equals("DD4T.MVC.ViewModels.XPM.IXpmMarkupService")).FirstOrDefault();
+            var defaultXpmMarkupService = providerTypes.Where(a => a.FullName.Equals("DD4T.Mvc.ViewModels.XPM.XpmMarkupService")).FirstOrDefault();
 
 
-            if (!container.IsRegistered(iComponentPresentationRenderer))
-                container.RegisterType(iComponentPresentationRenderer, defaultComponentPresentationRenderer);
+            if (iComponentPresentationRenderer != null || defaultComponentPresentationRenderer != null)
+            {
+                if (!container.IsRegistered(iComponentPresentationRenderer))
+                    container.RegisterType(iComponentPresentationRenderer, defaultComponentPresentationRenderer);
+            }
+
+            if (iXpmMarkupService != null || defaultXpmMarkupService != null)
+            {
+                if (!container.IsRegistered(iXpmMarkupService))
+                    container.RegisterType(iXpmMarkupService, defaultXpmMarkupService);
+            }
         }
     }
 }
