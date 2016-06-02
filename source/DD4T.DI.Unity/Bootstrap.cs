@@ -101,9 +101,6 @@ namespace DD4T.DI.Unity
             if(!container.IsRegistered<IDD4TConfiguration>())
                 container.RegisterType<IDD4TConfiguration, DD4TConfiguration>(new ContainerControlledLifetimeManager());
              
-            if(!container.IsRegistered<ILogger>())
-                container.RegisterType<ILogger, DefaultLogger>(new ContainerControlledLifetimeManager());
-
             if(!container.IsRegistered<ICacheAgent>())
                 container.RegisterType<ICacheAgent, DefaultCacheAgent>();
 
