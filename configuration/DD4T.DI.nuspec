@@ -11,8 +11,8 @@
     </releaseNotes>
     <tags>SDLTridion Tridion DD4T MVC Unity</tags>
     <dependencies>
-      <dependency id="Unity" version="3.0.1304.0" />
-      <dependency id="DD4T.Core" version="2.1.0" />
+      <dependency id="Unity" version="4.0.1" />
+      <dependency id="DD4T.Core" version="2.2.2" />
     </dependencies>
   </metadata>
 </package>
