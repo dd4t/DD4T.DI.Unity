@@ -12,7 +12,7 @@
     <tags>SDLTridion Tridion DD4T MVC Unity</tags>
     <dependencies>
       <dependency id="Unity" version="4.0.1" />
-      <dependency id="DD4T.Core" version="2.2.2" />
+      <dependency id="DD4T.Core" version="2.5" />
     </dependencies>
   </metadata>
 </package>
