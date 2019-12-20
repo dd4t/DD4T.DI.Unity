@@ -7,12 +7,15 @@
 
 Unity Dependency injection container
 
+## Release 2.5
+
+- Upgraded reference to DD4T.Core
 
 
 ## How to 
 
 1. Install Nuget package: `Install-Package DD4T.DI.Unity` [http://www.nuget.org/packages/DD4T.DI.Unity](http://www.nuget.org/packages/DD4T.DI.Unity "DD4T.DI.Unity")
-2. Add `DD4T.DI.Unity` namespace to your usings;
+2. Add `DD4T.DI.Unity` namespace to your usings
 3. Call the `UseDD4T` method on your Unity `Microsoft.Practices.Unity.UnityContainer` interface.
 
 >     IUnityContainer container = new UnityContainer();
